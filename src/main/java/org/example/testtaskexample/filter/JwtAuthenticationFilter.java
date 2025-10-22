@@ -34,6 +34,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             if (token != null && tokenProvider.validateToken(token)) {
                 String username = tokenProvider.getUsernameFromJWT(token);
 
+                // Создание объекта аутентфикации
                 UserDetails userDetails = companyAdminService.loadUserByUsername(username);
                 UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities());

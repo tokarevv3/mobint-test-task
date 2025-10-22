@@ -22,11 +22,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                 .body(Map.of("message", ex.getMessage()));
     }
-
-//    @ExceptionHandler(UsernameNotFoundException.class)
-//    public ResponseEntity<Map<String, String>> handlerUsernameNotFound(UsernameNotFoundException ex) {
-//        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-//                .body(Map.of("message", ex.getMessage()));
-//    }
-
 }
