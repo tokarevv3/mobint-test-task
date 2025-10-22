@@ -21,7 +21,7 @@ public class SearchService {
 
     private String maskNumber(String number, String mask) {
         if (!isNumberValid(number, mask)) {
-            throw new IllegalArgumentException("Неверный формат номера: " + number);
+            throw new IllegalArgumentException("Некорректно введен номер, формат " + mask);
         }
 
         StringBuilder result = new StringBuilder();
